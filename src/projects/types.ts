@@ -5,7 +5,7 @@ import type { FormationId } from '../experience/director';
 export type ProjectSlug = 'fiscora' | 'anka' | 'persian-alpr';
 
 export interface Award {
-  /** e.g. "Second Place" / "Gold Award" */
+  /** e.g. "Silver Medal" / "Gold Award" */
   title: string;
   /** e.g. "Innoverse" */
   event: string;

@@ -7,7 +7,7 @@
     "summary": "A bilingual finance cockpit that turns transaction history into forecasts, risk signals and grounded answers — and shows its uncertainty.",
     "awards": [
       {
-        "title": "Second Place",
+        "title": "Silver Medal",
         "event": "Innoverse",
         "where": "United States"
       }
@@ -28,7 +28,7 @@
     ],
     "seo": {
       "title": "Fiscora — Sam Afshar",
-      "description": "Fiscora: a bilingual (English/Persian) finance cockpit with an LSTM behaviour model, bootstrap month-end projections, receipt OCR and a grounded AI coach. Second Place at Innoverse, United States."
+      "description": "Fiscora: a bilingual (English/Persian) finance cockpit with an LSTM behaviour model, bootstrap month-end projections, receipt OCR and a grounded AI coach. Silver Medal at Innoverse, United States."
     }
   },
   {
@@ -40,11 +40,12 @@
     "awards": [
       {
         "title": "Gold Award",
-        "event": "1idea1world"
+        "event": "1Idea1World"
       },
       {
-        "title": "Gold Award",
-        "event": "IFIA"
+        "title": "Gold Medal",
+        "event": "IFIA",
+        "where": "Geneva 2026"
       }
     ],
     "repo": "https://github.com/SamAfshar2011/1i1w_competition",
@@ -62,7 +63,7 @@
     ],
     "seo": {
       "title": "ANKA — Sam Afshar",
-      "description": "ANKA: an AI earthquake structural-safety assistant that predicts collapse probability from eight building and seismic parameters, simulates shaking, and issues sealed, verifiable reports. Gold Award at 1idea1world and Gold Award from IFIA."
+      "description": "ANKA: an AI earthquake structural-safety assistant that predicts collapse probability from eight building and seismic parameters, simulates shaking, and issues sealed, verifiable reports. Gold Award at 1Idea1World and Gold Medal from IFIA (Geneva 2026)."
     }
   },
   {

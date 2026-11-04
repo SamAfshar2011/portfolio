@@ -662,5 +662,37 @@
    1280,
    2400
   ]
+ },
+ "honors/medal-1i1w-gold": {
+  "width": 900,
+  "height": 900,
+  "widths": [
+   480,
+   900
+  ]
+ },
+ "honors/medal-innoverse-silver": {
+  "width": 900,
+  "height": 900,
+  "widths": [
+   480,
+   900
+  ]
+ },
+ "honors/cert-ifia-gold": {
+  "width": 1400,
+  "height": 1050,
+  "widths": [
+   720,
+   1400
+  ]
+ },
+ "honors/cert-ifia-inv": {
+  "width": 1400,
+  "height": 1050,
+  "widths": [
+   720,
+   1400
+  ]
  }
 }

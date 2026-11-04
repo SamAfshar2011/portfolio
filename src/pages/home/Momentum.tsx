@@ -32,7 +32,7 @@ const BEATS = [
   {
     label: 'Juries',
     title: 'Then juries.',
-    body: 'Fiscora took Second Place at Innoverse in the United States. ANKA won a Gold Award at 1idea1world and a Gold Award from IFIA.',
+    body: 'Fiscora took a Silver Medal at Innoverse in the United States. ANKA won gold twice: at 1Idea1World and at IFIA’s competition in Geneva.',
   },
   {
     label: 'Now',

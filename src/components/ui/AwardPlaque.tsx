@@ -5,11 +5,11 @@ import type { Award } from '../../projects/types';
  * the distinction, and the event set in the editorial serif.
  */
 export function AwardPlaque({ award, size = 'md' }: { award: Award; size?: 'md' | 'lg' }) {
-  const metal = /gold/i.test(award.title) ? 'gold' : /second/i.test(award.title) ? 'silver' : 'bronze';
+  const metal = /gold/i.test(award.title) ? 'gold' : /silver|second/i.test(award.title) ? 'silver' : 'bronze';
   return (
     <figure className={`plaque plaque-${size}`} data-metal={metal}>
       <span className="plaque-token" aria-hidden="true">
-        {metal === 'silver' ? '2' : ''}
+        {''}
       </span>
       <figcaption className="plaque-text">
         <span className="plaque-title t-meta">{award.title}</span>
