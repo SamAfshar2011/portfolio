@@ -1,0 +1,666 @@
+{
+ "fiscora/dashboard": {
+  "width": 3002,
+  "height": 1722,
+  "widths": [
+   1280,
+   2400
+  ]
+ },
+ "fiscora/transactions": {
+  "width": 3002,
+  "height": 1722,
+  "widths": [
+   1280,
+   2400
+  ]
+ },
+ "fiscora/insights": {
+  "width": 3002,
+  "height": 1722,
+  "widths": [
+   1280,
+   2400
+  ]
+ },
+ "fiscora/panel-header": {
+  "width": 3002,
+  "height": 176,
+  "widths": [
+   720,
+   1400
+  ]
+ },
+ "fiscora/panel-balance": {
+  "width": 800,
+  "height": 482,
+  "widths": [
+   720,
+   800
+  ]
+ },
+ "fiscora/panel-spent": {
+  "width": 804,
+  "height": 482,
+  "widths": [
+   720,
+   804
+  ]
+ },
+ "fiscora/panel-health": {
+  "width": 800,
+  "height": 482,
+  "widths": [
+   720,
+   800
+  ]
+ },
+ "fiscora/panel-chart": {
+  "width": 1628,
+  "height": 636,
+  "widths": [
+   720,
+   1400
+  ]
+ },
+ "fiscora/panel-category": {
+  "width": 800,
+  "height": 636,
+  "widths": [
+   720,
+   800
+  ]
+ },
+ "fiscora/panel-transactions": {
+  "width": 1422,
+  "height": 1546,
+  "widths": [
+   720,
+   1400
+  ]
+ },
+ "fiscora/panel-whatif": {
+  "width": 1008,
+  "height": 852,
+  "widths": [
+   720,
+   1008
+  ]
+ },
+ "fiscora/panel-insights": {
+  "width": 1422,
+  "height": 852,
+  "widths": [
+   720,
+   1400
+  ]
+ },
+ "fiscora/panel-recurring": {
+  "width": 1214,
+  "height": 638,
+  "widths": [
+   720,
+   1214
+  ]
+ },
+ "anka/predictor": {
+  "width": 3002,
+  "height": 1722,
+  "widths": [
+   1280,
+   2400
+  ]
+ },
+ "anka/predictor-card": {
+  "width": 1724,
+  "height": 1568,
+  "widths": [
+   800,
+   1600
+  ]
+ },
+ "anka/report": {
+  "width": 1819,
+  "height": 2573,
+  "widths": [
+   900,
+   1600
+  ]
+ },
+ "anka/predictor-poster": {
+  "width": 1760,
+  "height": 1722,
+  "widths": [
+   1100
+  ]
+ },
+ "anka/predictor-loop": {
+  "width": 1100,
+  "height": 1076,
+  "video": true
+ },
+ "anka/logo": {
+  "width": 1024,
+  "height": 1024,
+  "widths": [
+   256,
+   512
+  ]
+ },
+ "alpr/scene-4": {
+  "width": 3840,
+  "height": 5760,
+  "widths": [
+   960,
+   1920
+  ]
+ },
+ "alpr/scene-4-annotated": {
+  "width": 3840,
+  "height": 5760,
+  "widths": [
+   960,
+   1920
+  ]
+ },
+ "alpr/scene-5": {
+  "width": 6000,
+  "height": 4000,
+  "widths": [
+   960,
+   1920
+  ]
+ },
+ "alpr/scene-5-annotated": {
+  "width": 6000,
+  "height": 4000,
+  "widths": [
+   960,
+   1920
+  ]
+ },
+ "alpr/scene-6": {
+  "width": 749,
+  "height": 489,
+  "widths": [
+   749
+  ]
+ },
+ "alpr/scene-6-annotated": {
+  "width": 749,
+  "height": 489,
+  "widths": [
+   749
+  ]
+ },
+ "alpr/scene-7": {
+  "width": 960,
+  "height": 1280,
+  "widths": [
+   960
+  ]
+ },
+ "alpr/scene-7-annotated": {
+  "width": 960,
+  "height": 1280,
+  "widths": [
+   960
+  ]
+ },
+ "alpr/scene-8": {
+  "width": 788,
+  "height": 496,
+  "widths": [
+   788
+  ]
+ },
+ "alpr/scene-8-annotated": {
+  "width": 788,
+  "height": 496,
+  "widths": [
+   788
+  ]
+ },
+ "alpr/hero": {
+  "width": 4200,
+  "height": 2800,
+  "widths": [
+   1280,
+   2400
+  ]
+ },
+ "alpr/plates/4-plate_01": {
+  "width": 148,
+  "height": 46,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/4-plate_01-1": {
+  "width": 15,
+  "height": 28,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/4-plate_01-2": {
+  "width": 16,
+  "height": 28,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/4-plate_01-3": {
+  "width": 20,
+  "height": 28,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/4-plate_01-4": {
+  "width": 15,
+  "height": 29,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/4-plate_01-5": {
+  "width": 14,
+  "height": 29,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/4-plate_01-6": {
+  "width": 16,
+  "height": 29,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/4-plate_01-7": {
+  "width": 13,
+  "height": 24,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/4-plate_01-8": {
+  "width": 13,
+  "height": 20,
+  "widths": [],
+  "png": true
+ },
+ "alpr/plates/4-plate_02": {
+  "width": 180,
+  "height": 68,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/4-plate_02-1": {
+  "width": 20,
+  "height": 38,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/4-plate_02-2": {
+  "width": 20,
+  "height": 38,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/4-plate_02-3": {
+  "width": 25,
+  "height": 35,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/4-plate_02-4": {
+  "width": 20,
+  "height": 35,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/4-plate_02-5": {
+  "width": 20,
+  "height": 35,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/4-plate_02-6": {
+  "width": 19,
+  "height": 40,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/4-plate_02-7": {
+  "width": 18,
+  "height": 33,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/4-plate_02-8": {
+  "width": 18,
+  "height": 33,
+  "widths": [],
+  "png": true
+ },
+ "alpr/plates/5-plate_01": {
+  "width": 716,
+  "height": 197,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/5-plate_01-1": {
+  "width": 86,
+  "height": 156,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/5-plate_01-2": {
+  "width": 87,
+  "height": 159,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/5-plate_01-3": {
+  "width": 122,
+  "height": 162,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/5-plate_01-4": {
+  "width": 87,
+  "height": 162,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/5-plate_01-5": {
+  "width": 86,
+  "height": 162,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/5-plate_01-6": {
+  "width": 87,
+  "height": 163,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/5-plate_01-7": {
+  "width": 74,
+  "height": 137,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/5-plate_01-8": {
+  "width": 72,
+  "height": 137,
+  "widths": [],
+  "png": true
+ },
+ "alpr/plates/6-plate_01": {
+  "width": 59,
+  "height": 40,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/6-plate_01-1": {
+  "width": 6,
+  "height": 20,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/6-plate_01-2": {
+  "width": 6,
+  "height": 20,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/6-plate_01-3": {
+  "width": 12,
+  "height": 13,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/6-plate_01-4": {
+  "width": 9,
+  "height": 20,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/6-plate_01-5": {
+  "width": 5,
+  "height": 20,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/6-plate_01-6": {
+  "width": 9,
+  "height": 21,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/6-plate_01-7": {
+  "width": 9,
+  "height": 19,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/6-plate_01-8": {
+  "width": 9,
+  "height": 19,
+  "widths": [],
+  "png": true
+ },
+ "alpr/plates/6-plate_02": {
+  "width": 113,
+  "height": 46,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/6-plate_02-1": {
+  "width": 13,
+  "height": 22,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/6-plate_02-2": {
+  "width": 13,
+  "height": 23,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/6-plate_02-3": {
+  "width": 20,
+  "height": 14,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/6-plate_02-4": {
+  "width": 12,
+  "height": 23,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/6-plate_02-5": {
+  "width": 11,
+  "height": 23,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/6-plate_02-6": {
+  "width": 14,
+  "height": 23,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/6-plate_02-7": {
+  "width": 13,
+  "height": 21,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/6-plate_02-8": {
+  "width": 13,
+  "height": 21,
+  "widths": [],
+  "png": true
+ },
+ "alpr/plates/7-plate_01": {
+  "width": 112,
+  "height": 31,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/7-plate_01-1": {
+  "width": 14,
+  "height": 27,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/7-plate_01-2": {
+  "width": 14,
+  "height": 27,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/7-plate_01-3": {
+  "width": 19,
+  "height": 28,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/7-plate_01-4": {
+  "width": 15,
+  "height": 24,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/7-plate_01-5": {
+  "width": 14,
+  "height": 24,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/7-plate_01-6": {
+  "width": 14,
+  "height": 27,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/7-plate_01-7": {
+  "width": 14,
+  "height": 23,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/7-plate_01-8": {
+  "width": 14,
+  "height": 23,
+  "widths": [],
+  "png": true
+ },
+ "alpr/plates/8-plate_01": {
+  "width": 276,
+  "height": 82,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/8-plate_01-1": {
+  "width": 31,
+  "height": 64,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/8-plate_01-2": {
+  "width": 31,
+  "height": 64,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/8-plate_01-3": {
+  "width": 52,
+  "height": 64,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/8-plate_01-4": {
+  "width": 34,
+  "height": 65,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/8-plate_01-5": {
+  "width": 32,
+  "height": 65,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/8-plate_01-6": {
+  "width": 33,
+  "height": 65,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/8-plate_01-7": {
+  "width": 31,
+  "height": 61,
+  "widths": [],
+  "png": true
+ },
+ "alpr/chars/8-plate_01-8": {
+  "width": 32,
+  "height": 60,
+  "widths": [],
+  "png": true
+ },
+ "fiscora/module-header": {
+  "width": 3002,
+  "height": 173,
+  "widths": [
+   720,
+   1400
+  ]
+ },
+ "fiscora/module-balance": {
+  "width": 785,
+  "height": 466,
+  "widths": [
+   720,
+   785
+  ]
+ },
+ "fiscora/module-spent": {
+  "width": 784,
+  "height": 466,
+  "widths": [
+   720,
+   784
+  ]
+ },
+ "fiscora/module-health": {
+  "width": 785,
+  "height": 466,
+  "widths": [
+   720,
+   785
+  ]
+ },
+ "fiscora/module-chart": {
+  "width": 1611,
+  "height": 622,
+  "widths": [
+   720,
+   1400
+  ]
+ },
+ "fiscora/module-category": {
+  "width": 785,
+  "height": 622,
+  "widths": [
+   720,
+   785
+  ]
+ },
+ "fiscora/cockpit-plate": {
+  "width": 3002,
+  "height": 1722,
+  "widths": [
+   1280,
+   2400
+  ]
+ }
+}
