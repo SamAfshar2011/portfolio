@@ -1,0 +1,152 @@
+{
+ "source": {
+  "w": 3002,
+  "h": 1722
+ },
+ "modules": [
+  {
+   "id": "fiscora/module-header",
+   "name": "header",
+   "label": "Navigation",
+   "depth": 40,
+   "box": [
+    0,
+    0,
+    3002,
+    173
+   ],
+   "outline": {
+    "left": 0,
+    "top": 0,
+    "right": 3002,
+    "bottom": 170,
+    "cut": {
+     "tl": 0,
+     "tr": 0,
+     "br": 0,
+     "bl": 0
+    }
+   }
+  },
+  {
+   "id": "fiscora/module-balance",
+   "name": "balance",
+   "label": "Balance & runway",
+   "depth": 150,
+   "box": [
+    273,
+    506,
+    1058,
+    972
+   ],
+   "outline": {
+    "left": 276,
+    "top": 509,
+    "right": 1055,
+    "bottom": 969,
+    "cut": {
+     "tl": 26,
+     "tr": 0,
+     "br": 27,
+     "bl": 0
+    }
+   }
+  },
+  {
+   "id": "fiscora/module-spent",
+   "name": "spent",
+   "label": "Month-end projection",
+   "depth": 210,
+   "box": [
+    1100,
+    506,
+    1884,
+    972
+   ],
+   "outline": {
+    "left": 1103,
+    "top": 509,
+    "right": 1881,
+    "bottom": 969,
+    "cut": {
+     "tl": 26,
+     "tr": 0,
+     "br": 26,
+     "bl": 0
+    }
+   }
+  },
+  {
+   "id": "fiscora/module-health",
+   "name": "health",
+   "label": "Financial Health Score",
+   "depth": 270,
+   "box": [
+    1926,
+    506,
+    2711,
+    972
+   ],
+   "outline": {
+    "left": 1929,
+    "top": 509,
+    "right": 2708,
+    "bottom": 969,
+    "cut": {
+     "tl": 26,
+     "tr": 0,
+     "br": 26,
+     "bl": 0
+    }
+   }
+  },
+  {
+   "id": "fiscora/module-chart",
+   "name": "chart",
+   "label": "Last 30 days",
+   "depth": 120,
+   "box": [
+    273,
+    1014,
+    1884,
+    1636
+   ],
+   "outline": {
+    "left": 276,
+    "top": 1017,
+    "right": 1881,
+    "bottom": 1633,
+    "cut": {
+     "tl": 26,
+     "tr": 0,
+     "br": 26,
+     "bl": 0
+    }
+   }
+  },
+  {
+   "id": "fiscora/module-category",
+   "name": "category",
+   "label": "Category mix",
+   "depth": 180,
+   "box": [
+    1926,
+    1014,
+    2711,
+    1636
+   ],
+   "outline": {
+    "left": 1929,
+    "top": 1017,
+    "right": 2708,
+    "bottom": 1633,
+    "cut": {
+     "tl": 26,
+     "tr": 0,
+     "br": 26,
+     "bl": 0
+    }
+   }
+  }
+ ]
+}

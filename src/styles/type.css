@@ -1,0 +1,128 @@
+/*
+ * Type system
+ *   Mona Sans (variable wght + wdth) carries display and interface text; its
+ *   width axis lets headlines behave structurally (expanding as they resolve).
+ *   Newsreader italic is the editorial voice, used for a word or a line.
+ *   Geist Mono is for measured things: metadata, metrics, code, numbers.
+ */
+@layer components {
+  .t-display {
+    font-family: var(--font-sans);
+    font-weight: 640;
+    font-stretch: 116%;
+    font-size: clamp(3.4rem, 12.5vw, 13.5rem);
+    line-height: 0.84;
+    letter-spacing: -0.045em;
+    font-kerning: normal;
+  }
+
+  .t-headline {
+    font-family: var(--font-sans);
+    font-weight: 560;
+    font-stretch: 108%;
+    font-size: clamp(2.35rem, 6.2vw, 6.25rem);
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    text-wrap: balance;
+  }
+
+  .t-title {
+    font-family: var(--font-sans);
+    font-weight: 560;
+    font-stretch: 104%;
+    font-size: clamp(1.6rem, 3.1vw, 2.9rem);
+    line-height: 1.04;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+  }
+
+  .t-subtitle {
+    font-family: var(--font-sans);
+    font-weight: 540;
+    font-size: clamp(1.15rem, 1.5vw, 1.4rem);
+    line-height: 1.25;
+    letter-spacing: -0.012em;
+  }
+
+  .t-lead {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: clamp(1.14rem, 1.55vw, 1.5rem);
+    line-height: 1.42;
+    letter-spacing: -0.012em;
+    color: var(--bone-dim);
+    text-wrap: pretty;
+  }
+  .t-lead strong {
+    color: var(--bone);
+    font-weight: 540;
+  }
+
+  .t-body {
+    font-size: clamp(1rem, 1.05vw, 1.0625rem);
+    line-height: 1.62;
+    color: var(--bone-dim);
+    text-wrap: pretty;
+  }
+  .t-body strong {
+    color: var(--bone);
+    font-weight: 560;
+  }
+
+  .t-meta {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 450;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--bone-faint);
+  }
+
+  .t-mono {
+    font-family: var(--font-mono);
+    font-feature-settings: 'zero' 1;
+    letter-spacing: -0.01em;
+  }
+
+  .t-num {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum' 1;
+  }
+
+  .t-serif {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 380;
+    font-stretch: 100%;
+    letter-spacing: -0.01em;
+    font-variation-settings: 'opsz' 72;
+  }
+
+  /* Text lit by the same key light as the 3D stage (see useLightVars) */
+  .t-lit {
+    background: radial-gradient(
+        70vmax 50vmax at calc(var(--lx) * 100vw) calc(var(--ly) * 100vh),
+        #fffaf2 0%,
+        var(--bone) 36%,
+        #b9b2a8 100%
+      )
+      fixed;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .t-accent {
+    color: var(--accent);
+  }
+
+  /* SplitText line masks */
+  .split-line {
+    display: block;
+  }
+  .split-mask {
+    overflow: clip;
+    padding-bottom: 0.08em;
+    margin-bottom: -0.08em;
+  }
+}

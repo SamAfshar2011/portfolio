@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b0b0c" />
+    <meta name="color-scheme" content="dark" />
+    <title>Sam Afshar — Builder of AI systems</title>
+    <meta name="description" content="Sam Afshar builds AI systems: a finance cockpit that forecasts spending, an earthquake-safety assistant that estimates collapse risk, and a pipeline that reads Persian license plates." />
+    <meta name="author" content="Sam Afshar" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/icons/icon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <!--seo-->
+    <style>
+      /* First paint: the right background before any CSS arrives, and the
+         static, crawlable summary hidden once JavaScript is available. */
+      html { background: #0b0b0c; color: #ede8e1; }
+      .js #prerender { display: none; }
+      #prerender { max-width: 44rem; margin: 0 auto; padding: 6rem 1.5rem; font: 16px/1.6 system-ui, sans-serif; }
+      #prerender a { color: #ffe6c2; }
+
+      /* Boot: the moment before the glass arrives — an almost empty studio,
+         one faint point of light where the array will turn. Everything else
+         arrives as real glass (src/components/boot/Opening.tsx). */
+      #boot { display: none; }
+      .js #boot {
+        display: block; position: fixed; left: 0; top: 0; width: 100%; height: 100vh; height: 100lvh;
+        z-index: 30; pointer-events: none;
+      }
+      .boot-glow {
+        position: absolute; inset: 0;
+        background: radial-gradient(70vmax 50vmax at 50% 50%, rgb(40 35 30 / 0.45), rgb(11 11 12 / 0) 72%);
+        animation: boot-in 1.6s 0.1s cubic-bezier(0.16, 1, 0.3, 1) both;
+      }
+      .boot-pilot {
+        position: absolute; left: 50%; top: 50%; width: 5px; height: 5px; margin: -2.5px 0 0 -2.5px;
+        border-radius: 50%; background: #ffe6c2;
+        box-shadow: 0 0 12px 3px rgb(255 230 194 / 0.35), 0 0 60px 10px rgb(255 230 194 / 0.08);
+        animation: boot-in 1.2s 0.5s both, boot-breathe 2.8s 1.7s ease-in-out infinite;
+      }
+      @keyframes boot-in { from { opacity: 0; } }
+      @keyframes boot-breathe { 50% { opacity: 0.45; transform: scale(0.8); } }
+      @media (prefers-reduced-motion: reduce) {
+        .boot-pilot { animation: boot-in 1.2s 0.3s both; }
+      }
+      /* While booting, chrome and content wait for the opening to reveal them. */
+      html[data-boot] .site-header,
+      html[data-boot] .hero-name,
+      html[data-boot] [data-hero-detail],
+      html[data-boot]:not([data-boot-home]) #page,
+      html[data-boot] .stage-fallback { opacity: 0; }
+    </style>
+    <script>
+      (function () {
+        var d = document.documentElement;
+        d.classList.add('js');
+        d.setAttribute('data-boot', '');
+        var base = '%BASE_URL%';
+        var p = location.pathname;
+        if (p === base || p === base + 'index.html' || p + '/' === base) d.setAttribute('data-boot-home', '');
+        // If the app never starts (script blocked or failed), show the static page.
+        setTimeout(function () {
+          if (document.getElementById('prerender')) {
+            d.classList.remove('js');
+            d.removeAttribute('data-boot');
+          }
+        }, 12000);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="boot" aria-hidden="true"><div class="boot-glow"></div><i class="boot-pilot"></i></div>
+    <div id="root"><!--prerender--></div>
+    <noscript>
+      <p style="max-width:44rem;margin:0 auto;padding:0 1.5rem 4rem;font:16px/1.6 system-ui,sans-serif;color:#b8b2a9">
+        This site is an interactive experience and works best with JavaScript enabled. The essentials are above.
+      </p>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

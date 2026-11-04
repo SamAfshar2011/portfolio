@@ -1,0 +1,96 @@
+[
+  {
+    "slug": "fiscora",
+    "index": "01",
+    "name": "Fiscora",
+    "kicker": "Personal-finance intelligence",
+    "summary": "A bilingual finance cockpit that turns transaction history into forecasts, risk signals and grounded answers — and shows its uncertainty.",
+    "awards": [
+      {
+        "title": "Second Place",
+        "event": "Innoverse",
+        "where": "United States"
+      }
+    ],
+    "repo": "https://github.com/SamAfshar2011/innoverse2026-Fiscora",
+    "room": "fiscora",
+    "formation": "horizon",
+    "accent": "#e8c98c",
+    "tech": [
+      "Python",
+      "FastAPI",
+      "TensorFlow / Keras",
+      "scikit-learn",
+      "pandas",
+      "EasyOCR",
+      "JavaScript",
+      "Canvas 2D"
+    ],
+    "seo": {
+      "title": "Fiscora — Sam Afshar",
+      "description": "Fiscora: a bilingual (English/Persian) finance cockpit with an LSTM behaviour model, bootstrap month-end projections, receipt OCR and a grounded AI coach. Second Place at Innoverse, United States."
+    }
+  },
+  {
+    "slug": "anka",
+    "index": "02",
+    "name": "ANKA",
+    "kicker": "Earthquake structural-safety assistant",
+    "summary": "An assistant that estimates how likely a building is to collapse in an earthquake, explains why, simulates the shaking, and seals every report.",
+    "awards": [
+      {
+        "title": "Gold Award",
+        "event": "1idea1world"
+      },
+      {
+        "title": "Gold Award",
+        "event": "IFIA"
+      }
+    ],
+    "repo": "https://github.com/SamAfshar2011/1i1w_competition",
+    "room": "anka",
+    "formation": "building",
+    "accent": "#ff7a52",
+    "tech": [
+      "Python",
+      "TensorFlow / Keras",
+      "scikit-learn",
+      "ReportLab",
+      "HMAC-SHA256",
+      "JavaScript",
+      "Canvas 2D"
+    ],
+    "seo": {
+      "title": "ANKA — Sam Afshar",
+      "description": "ANKA: an AI earthquake structural-safety assistant that predicts collapse probability from eight building and seismic parameters, simulates shaking, and issues sealed, verifiable reports. Gold Award at 1idea1world and Gold Award from IFIA."
+    }
+  },
+  {
+    "slug": "persian-alpr",
+    "index": "03",
+    "name": "Persian ALPR",
+    "alias": "PlateHunter",
+    "kicker": "Computer vision for Iranian license plates",
+    "summary": "A modular vision system that finds a plate, recovers its eight characters, reads each one, and refuses to guess when the evidence is weak.",
+    "awards": [],
+    "repo": "https://github.com/SamAfshar2011/Persian_ALPR_project",
+    "room": "persian-alpr",
+    "formation": "plate",
+    "accent": "#72dcef",
+    "tech": [
+      "Python",
+      "PyTorch",
+      "Ultralytics YOLO",
+      "ConvNeXt V2",
+      "timm",
+      "OpenCV",
+      "SciPy",
+      "Kalman filter",
+      "Apple MPS"
+    ],
+    "seo": {
+      "title": "Persian ALPR (PlateHunter) — Sam Afshar",
+      "description": "PlateHunter: a modular ALPR system for Iranian plates — YOLO26 plate and character detection, exact-eight character recovery, ConvNeXt V2 classification over 32 classes, position-aware decoding, confidence gating and Kalman/Hungarian video tracking."
+    }
+  }
+]

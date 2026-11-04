@@ -1,0 +1,41 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/mona-sans/wdth.css';
+@import '@fontsource-variable/newsreader/opsz-italic.css';
+@import '@fontsource-variable/geist-mono/wght.css';
+
+@import './tokens.css';
+@import './base.css';
+@import './type.css';
+@import './materials.css';
+@import './chrome.css';
+@import './home.css';
+@import './project.css';
+
+/*
+ * Tailwind is used for layout and spacing. Colour, type and motion come from
+ * the tokens in tokens.css so every surface stays inside one visual system.
+ */
+@theme {
+  --font-sans: 'Mona Sans Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Newsreader Variable', ui-serif, Georgia, serif;
+  --font-mono: 'Geist Mono Variable', ui-monospace, 'SFMono-Regular', monospace;
+
+  --color-ink-0: #060606;
+  --color-ink-1: #0b0b0c;
+  --color-ink-2: #121213;
+  --color-ink-3: #1b1b1d;
+  --color-bone: #ede8e1;
+  --color-bone-dim: #b8b2a9;
+  --color-bone-faint: #8a847b;
+  --color-porcelain: #f2efea;
+  --color-graphite: #1a1917;
+  --color-lumen: #ffe6c2;
+  --color-accent: var(--accent);
+
+  --breakpoint-xs: 25rem;
+  --breakpoint-3xl: 112rem;
+
+  --ease-settle: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-glide: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-press: cubic-bezier(0.34, 1.4, 0.64, 1);
+}

@@ -1,0 +1,107 @@
+/*
+ * Visual system — "Resolve"
+ *
+ * Every project on this site is a machine that turns raw signal into something
+ * legible. The interface borrows the language of optics: dark warm studio
+ * space, one key light, smoked glass with dichroic edges, and type that comes
+ * into focus rather than fading in.
+ *
+ * Colour is lighting, not decoration. The studio is a neutral deep charcoal;
+ * colour arrives through light (accents, a restrained rim) and through thin
+ * dichroic edges. Each project room re-lights the glass while keeping the
+ * same materials.
+ */
+:root {
+  color-scheme: dark;
+
+  /* Surfaces — warm graphite, never pure black or blue-black */
+  --ink-0: #060606;
+  --ink-1: #0b0b0c;
+  --ink-2: #121213;
+  --ink-3: #1b1b1d;
+
+  /* Text. Contrast on --ink-1: bone 16.9:1, dim 9.6:1, faint 5.2:1 */
+  --bone: #ede8e1;
+  --bone-dim: #b8b2a9;
+  --bone-faint: #8a847b;
+
+  /* Light section (the one daylight room) */
+  --porcelain: #f2efea;
+  --graphite: #1a1917;
+  --graphite-dim: #4e4a44;
+
+  /* Hairlines */
+  --line: rgb(237 232 225 / 0.1);
+  --line-strong: rgb(237 232 225 / 0.22);
+
+  /* Key light + dichroic spectrum (thin-film interference colours) */
+  --lumen: #ffe6c2;
+  --di-1: #8fe3f2;
+  --di-2: #b9a8ff;
+  --di-3: #ffbfa0;
+  --di-4: #f3d98a;
+  --dichroic: linear-gradient(
+    var(--di-angle, 115deg),
+    var(--di-1),
+    var(--di-2) 34%,
+    var(--di-3) 68%,
+    var(--di-4)
+  );
+
+  /* Room environment. Overridden per project by [data-room]. */
+  --accent: #f0d9b0;
+  --accent-2: #9fd7e6;
+  --accent-ink: #0b0b0c;
+  --env-key: #2e2f33;
+  --env-rim: #14232a;
+
+  /* Live light position (0..1), driven by the pointer spring in JS */
+  --lx: 0.62;
+  --ly: 0.32;
+
+  /* Layout */
+  --gutter: clamp(1rem, 3.2vw, 3rem);
+  --max: 108rem;
+  --nav-h: 4.5rem;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+
+  /* Radii: controls are capsules, panels share one continuous radius */
+  --r-panel: clamp(1.25rem, 2vw, 1.75rem);
+  --r-media: clamp(0.9rem, 1.4vw, 1.25rem);
+  --r-chip: 999px;
+
+  /* Motion grammar */
+  --t-press: 160ms;
+  --t-fast: 320ms;
+  --t-medium: 700ms;
+  --t-slow: 1200ms;
+  --ease-settle: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-glide: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-press: cubic-bezier(0.34, 1.4, 0.64, 1);
+  --ease-optic: cubic-bezier(0.22, 0.9, 0.12, 1);
+}
+
+/* Fiscora: champagne gold and emerald. */
+[data-room='fiscora'] {
+  --accent: #e8c98c;
+  --accent-2: #4fdcb6;
+  --env-key: #2d2e30;
+  --env-rim: #0e2b24;
+}
+
+/* ANKA: mineral charcoal, bone, ember and a little cyan. */
+[data-room='anka'] {
+  --accent: #ff7a52;
+  --accent-2: #8fd6e0;
+  --env-key: #2f2f31;
+  --env-rim: #132329;
+}
+
+/* Persian ALPR: graphite, optical cyan, cool blue, a trace of violet. */
+[data-room='persian-alpr'] {
+  --accent: #72dcef;
+  --accent-2: #8fb0ff;
+  --env-key: #2c2e32;
+  --env-rim: #121832;
+}

@@ -1,0 +1,7 @@
+node_modules
+dist
+.DS_Store
+*.local
+# Original, full-resolution project media. Web derivatives live in src/assets/media
+# and are regenerated with `npm run media`.
+Assets/

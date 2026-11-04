@@ -1,0 +1,249 @@
+/*
+ * Materials
+ * Surfaces are smoked glass slabs with machined edges. The edge highlight is a
+ * gradient border whose bright point tracks the global key light (--lx/--ly),
+ * so DOM panels are lit by the same light as the WebGL stage.
+ */
+@layer components {
+  .m-slab {
+    position: relative;
+    isolation: isolate;
+    border-radius: var(--r-panel);
+    background:
+      linear-gradient(180deg, rgb(255 248 236 / 0.05), rgb(255 248 236 / 0.012) 42%, rgb(0 0 0 / 0.14)),
+      rgb(13 13 14 / 0.74);
+    box-shadow:
+      inset 0 1px 0 rgb(255 244 228 / 0.07),
+      0 50px 90px -50px rgb(0 0 0 / 0.9);
+    -webkit-backdrop-filter: blur(22px) saturate(1.15);
+    backdrop-filter: blur(22px) saturate(1.15);
+  }
+  .m-slab::before,
+  .m-edge::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    pointer-events: none;
+    background: radial-gradient(
+      60vmax 40vmax at calc(var(--lx) * 100vw) calc(var(--ly) * 100vh),
+      rgb(255 236 206 / 0.55),
+      rgb(237 232 225 / 0.1) 55%,
+      rgb(237 232 225 / 0.06)
+    )
+    fixed;
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: 1;
+  }
+  .m-edge {
+    position: relative;
+  }
+
+  .m-rule {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--line-strong) 12%, var(--line-strong) 88%, transparent);
+  }
+  .m-rule-v {
+    width: 1px;
+    background: linear-gradient(180deg, transparent, var(--line-strong) 12%, var(--line-strong) 88%, transparent);
+  }
+
+  .m-dichroic-line {
+    height: 1px;
+    background: var(--dichroic);
+    opacity: 0.8;
+  }
+
+  .m-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 1.9rem;
+    padding-inline: 0.85rem;
+    border-radius: var(--r-chip);
+    border: 1px solid var(--line);
+    background: rgb(20 20 21 / 0.55);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--bone-dim);
+    white-space: nowrap;
+  }
+
+  /*
+   * Buttons: capsule slabs with pressure. Hover brightens the lit edge and
+   * sweeps a specular band across; press compresses toward the surface.
+   */
+  .btn {
+    --btn-h: 3.25rem;
+    position: relative;
+    isolation: isolate;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    min-height: var(--btn-h);
+    padding-inline: 1.5rem;
+    border-radius: var(--r-chip);
+    font-weight: 560;
+    font-size: 0.98rem;
+    letter-spacing: -0.01em;
+    color: var(--bone);
+    background:
+      linear-gradient(180deg, rgb(255 248 236 / 0.09), rgb(255 248 236 / 0.02)),
+      rgb(22 22 23 / 0.8);
+    box-shadow:
+      inset 0 1px 0 rgb(255 244 228 / 0.12),
+      inset 0 -1px 0 rgb(0 0 0 / 0.4),
+      0 18px 40px -22px rgb(0 0 0 / 0.9);
+    transition:
+      transform var(--t-fast) var(--ease-press),
+      box-shadow var(--t-fast) var(--ease-settle),
+      background-color var(--t-fast) var(--ease-settle);
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  .btn::after {
+    content: '';
+    position: absolute;
+    inset: -40% -30%;
+    background: linear-gradient(100deg, transparent 40%, rgb(255 244 226 / 0.16) 50%, transparent 60%);
+    transform: translateX(-70%);
+    transition: transform 900ms var(--ease-settle);
+    z-index: -1;
+  }
+  .btn:hover::after {
+    transform: translateX(70%);
+  }
+  .btn:active {
+    transform: scale(0.965);
+    box-shadow:
+      inset 0 2px 6px rgb(0 0 0 / 0.5),
+      inset 0 1px 0 rgb(255 244 228 / 0.05);
+    transition-duration: var(--t-press);
+  }
+  .btn-primary {
+    color: var(--accent-ink);
+    background:
+      linear-gradient(180deg, rgb(255 255 255 / 0.35), rgb(255 255 255 / 0) 55%),
+      var(--accent);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.5),
+      inset 0 -1px 0 rgb(0 0 0 / 0.25),
+      0 20px 50px -20px color-mix(in oklab, var(--accent) 60%, transparent);
+  }
+  .btn-primary::after {
+    background: linear-gradient(100deg, transparent 40%, rgb(255 255 255 / 0.45) 50%, transparent 60%);
+  }
+  .btn .btn-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: -0.75rem;
+    border-radius: 50%;
+    background: rgb(255 255 255 / 0.08);
+    transition: transform var(--t-fast) var(--ease-settle);
+  }
+  .btn:hover .btn-icon {
+    transform: translateX(3px);
+  }
+  /*
+   * Merged with the cursor (components/cursor): the pointer's position inside
+   * the control (--mx/--my, -1..1) moves a pool of light and nudges the icon
+   * further than the button itself travels.
+   */
+  .btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(
+      70% 140% at calc(50% + var(--mx, 0) * 42%) calc(50% + var(--my, 0) * 60%),
+      rgb(255 250 240 / 0.16),
+      rgb(255 250 240 / 0) 70%
+    );
+    opacity: 0;
+    transition: opacity 500ms var(--ease-settle);
+    z-index: -1;
+    pointer-events: none;
+  }
+  .btn-primary::before {
+    background: radial-gradient(
+      70% 140% at calc(50% + var(--mx, 0) * 42%) calc(50% + var(--my, 0) * 60%),
+      rgb(255 255 255 / 0.34),
+      rgb(255 255 255 / 0) 70%
+    );
+  }
+  .btn[data-merged]::before {
+    opacity: 1;
+  }
+  .btn[data-merged] .btn-icon {
+    translate: calc(var(--mx, 0) * 3.5px) calc(var(--my, 0) * 2.5px);
+  }
+  /* Touch: a press spreads from the finger like a drop landing on glass. */
+  .btn[data-touch]::after {
+    inset: 0;
+    transform: none;
+    transition: none;
+    background: radial-gradient(circle at var(--tx, 50%) var(--ty, 50%), rgb(255 250 240 / 0.28), rgb(255 250 240 / 0) 60%);
+    animation: touch-press 620ms var(--ease-settle) both;
+  }
+  @keyframes touch-press {
+    from {
+      opacity: 1;
+      clip-path: circle(0% at var(--tx, 50%) var(--ty, 50%));
+    }
+    to {
+      opacity: 0;
+      clip-path: circle(140% at var(--tx, 50%) var(--ty, 50%));
+    }
+  }
+
+  /* Text link with an underline drawn by light */
+  .link-line {
+    position: relative;
+    display: inline;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 100% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 0.08em;
+    transition: background-size var(--t-medium) var(--ease-settle), color var(--t-fast);
+  }
+  @media (hover: hover) {
+    .link-line:hover {
+      background-size: 0% 1px;
+      background-position: 100% 100%;
+      color: var(--lumen);
+    }
+  }
+
+  /* Media frame: images and video sit in a slab with an inner rim of light */
+  .m-media {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--r-media);
+    background: var(--ink-2);
+    box-shadow:
+      0 0 0 1px rgb(237 232 225 / 0.08),
+      0 40px 90px -40px rgb(0 0 0 / 0.95);
+  }
+  .m-media::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    box-shadow:
+      inset 0 1px 0 rgb(255 244 228 / 0.12),
+      inset 0 0 0 1px rgb(255 244 228 / 0.04);
+  }
+}

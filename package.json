@@ -1,0 +1,41 @@
+{
+  "name": "sam-afshar-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -p . && vite build && node scripts/postbuild.mjs",
+    "preview": "vite preview",
+    "typecheck": "tsc -p .",
+    "media": "node scripts/process-media.mjs && node scripts/fiscora-cockpit.mjs",
+    "icons": "node scripts/make-icons.mjs",
+    "qa:slabs": "rolldown scripts/qa/slab-collisions.ts --format esm --platform node -o node_modules/.cache/qa/slabs.mjs > /dev/null && node node_modules/.cache/qa/slabs.mjs",
+    "qa:anka": "rolldown scripts/qa/anka-scenarios.ts --format esm --platform node -o node_modules/.cache/qa/anka.mjs > /dev/null && node node_modules/.cache/qa/anka.mjs"
+  },
+  "dependencies": {
+    "@dimforge/rapier3d-compat": "^0.20.0",
+    "@fontsource-variable/geist-mono": "^5.3.0",
+    "@fontsource-variable/mona-sans": "^5.3.0",
+    "@fontsource-variable/newsreader": "^5.3.0",
+    "@fontsource-variable/vazirmatn": "^5.3.0",
+    "gsap": "^3.15.0",
+    "lenis": "^1.3.26",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-router": "^7.18.4",
+    "three": "^0.186.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^26.6.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.186.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "sharp": "^0.35.4",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0"
+  }
+}
